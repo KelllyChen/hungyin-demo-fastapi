@@ -17,7 +17,9 @@ class Body(BaseModel):
 
 @app.get('/')
 def root():
-    return FileResponse("static/index.html")
+    #return FileResponse("static/index.html")
+    #return FileResponse("index.html")
+    return FileResponse(join(static_path, "index.html"))
 
 
 @app.post('/generate')
